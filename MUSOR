@@ -23,3 +23,8 @@ Set-Service MSExchangeIMAP4 -StartupType Automatic
 Start-Service MSExchangeIMAP4
 Set-Service MSExchangeIMAP4BE -StartupType Automatic
 Start-Service MSExchangeIMAP4BE
+
+
+Set-ImapSettings -LoginType PlainTextLogin
+Restart-Service MSExchangeIMAP4
+Restart-Service MSExchangeIMAP4BE
