@@ -32,3 +32,8 @@ Restart-Service MSExchangeIMAP4BE
 
 Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
 Get-ImapSettings | Select LoginType, AuthenticationMethods
+
+
+Set-ImapSettings -AuthenticationMethods PlainTextLogin
+Restart-Service MSExchangeIMAP4
+Restart-Service MSExchangeIMAP4BE
