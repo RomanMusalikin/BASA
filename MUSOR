@@ -25,6 +25,7 @@ Set-Service MSExchangeIMAP4BE -StartupType Automatic
 Start-Service MSExchangeIMAP4BE
 
 
+Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
 Set-ImapSettings -LoginType PlainTextLogin
 Restart-Service MSExchangeIMAP4
 Restart-Service MSExchangeIMAP4BE
