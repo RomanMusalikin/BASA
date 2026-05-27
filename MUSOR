@@ -18,3 +18,8 @@ New-ExchangeCertificate `
     -Services "IIS,SMTP"
 
 Enable-ExchangeCertificate -Thumbprint "ВСТАВЬ_THUMBPRINT" -Services "IIS,SMTP" -Force
+
+Set-Service MSExchangeIMAP4 -StartupType Automatic
+Start-Service MSExchangeIMAP4
+Set-Service MSExchangeIMAP4BE -StartupType Automatic
+Start-Service MSExchangeIMAP4BE
