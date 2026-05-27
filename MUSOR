@@ -8,3 +8,13 @@
     </Account>
   </Response>
 </Autodiscover>
+
+
+New-ExchangeCertificate `
+    -FriendlyName "Exchange2016" `
+    -SubjectName "CN=mail.2bits1.local" `
+    -DomainName "mail.2bits1.local","autodiscover.2bits1.local","MAIL" `
+    -PrivateKeyExportable $true `
+    -Services "IIS,SMTP"
+
+Enable-ExchangeCertificate -Thumbprint "ВСТАВЬ_THUMBPRINT" -Services "IIS,SMTP" -Force
