@@ -37,3 +37,8 @@ Get-ImapSettings | Select LoginType, AuthenticationMethods
 Set-ImapSettings -AuthenticationMethods PlainTextLogin
 Restart-Service MSExchangeIMAP4
 Restart-Service MSExchangeIMAP4BE
+
+
+Set-ImapSettings -LoginType PlainTextLogin -UnencryptedOrTLSBindings 0.0.0.0:143
+Restart-Service MSExchangeIMAP4
+Restart-Service MSExchangeIMAP4BE
